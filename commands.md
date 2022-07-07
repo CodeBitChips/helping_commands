@@ -1,3 +1,4 @@
+### Generate Class Scaffoldings
 ```
 rails generate scaffold  User name photo bio:text posts_counter:integer
 ```
@@ -17,7 +18,7 @@ rails generate scaffold Like
 ```
 rails db:migrate
 ```
-
+### Generate References among tables
 
 ```
 rails generate migration AddUserRefToPost user:references
