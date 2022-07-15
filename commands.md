@@ -58,17 +58,43 @@ rails db:migrate
 
 
 To add data:
-first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
-second_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
 
-first_post = Post.create(user: first_user, title: 'Hello', text: 'This is my first post')
-second_post = Post.create(user: first_user, title: 'Hello2', text: 'This is my second post')
-third_post = Post.create(user: first_user, title: 'Hello3', text: 'This is my third post')
-fourth_post = Post.create(user: first_user, title: 'Hello4', text: 'This is my fourth post')
-
-comment01 = Comment.create(post: first_post, user: first_user, text: 'Hi Tom, This is Comment One!' )
-comment02 = Comment.create(post: first_post, user: first_user, text: 'Hi Tom, This is Comment Two!' )
-comment03 = Comment.create(post: first_post, user: first_user, text: 'Hi Tom, This is Comment Three!' )
-comment04 = Comment.create(post: first_post, user: first_user, text: 'Hi Tom, This is Comment Four!' )
-comment05 = Comment.create(post: first_post, user: first_user, text: 'Hi Tom, This is Comment Five!' )
-comment06 = Comment.create(post: first_post, user: first_user, text: 'Hi Tom, This is Comment Six!' )
+##### Add Users
+```
+first_user = User.create(name: 'Tom', photo: 'https://med.gov.bz/wp-content/uploads/2020/08/dummy-profile-pic-300x300.jpg', bio: 'Teacher from Mexico.')
+```
+```
+second_user = User.create(name: 'Lilly', photo: 'https://www.kindpng.com/picc/m/252-2524695_dummy-profile-image-jpg-hd-png-download.png', bio: 'Teacher from Poland.')
+```
+##### Add Posts
+```
+first_post = Post.create(author_id: first_user.id, title: 'Hello', text: 'This is my first post')
+```
+```
+second_post = Post.create(author_id: first_user.id, title: 'Hello2', text: 'This is my second post')
+```
+```
+third_post = Post.create(author_id: first_user.id, title: 'Hello3', text: 'This is my third post')
+```
+```
+fourth_post = Post.create(author_id: first_user.id, title: 'Hello4', text: 'This is my fourth post')
+```
+##### Add Comments
+```
+Comment.create(post_id: first_post.id, author_id: first_user.id, text: 'Hi Tom, This is Comment One!' )
+```
+```
+Comment.create(post_id: first_post.id, author_id: first_user.id, text: 'Hi Tom, This is Comment Two!' )
+```
+```
+Comment.create(post_id: first_post.id, author_id: first_user.id, text: 'Hi Tom, This is Comment Three!' )
+```
+```
+Comment.create(post_id: first_post.id, author_id: first_user.id, text: 'Hi Tom, This is Comment Four!' )
+```
+```
+Comment.create(post_id: first_post.id, author_id: first_user.id, text: 'Hi Tom, This is Comment Five!' )
+```
+```
+Comment.create(post_id: first_post.id, author_id: first_user.id, text: 'Hi Tom, This is Comment Six!' )
+```
