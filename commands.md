@@ -1,18 +1,18 @@
 ### Generate Class Scaffoldings
 ```
-rails generate scaffold  User name photo bio:text posts_counter:integer
+rails generate model User name photo bio:text posts_counter:integer
 ```
 
 ```
-rails generate scaffold  Post title text:text comments_counter:integer likes_counter:integer
+rails generate model Post title text:text comments_counter:integer likes_counter:integer
 ```
 
 ```
-rails generate scaffold  Comment text:text 
+rails generate model Comment text:text 
 ```
 
 ```
-rails generate scaffold Like
+rails generate model Like
 ```
 
 ```
